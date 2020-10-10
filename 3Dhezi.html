@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.aa{
+			margin: 0 auto;
+			margin-top:200px;
+			width: 400px;
+			height: 400px;
+			position: relative;
+			transform-style: preserve-3d;
+			transform: rotateX(20deg) rotateY(30deg);
+			animation: aa 5s linear infinite;
+		}
+		@keyframes aa {
+				to{
+					transform: rotateX(360deg) rotateY(360deg);
+				}
+		}
+		.aa .a{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: 100px;
+			left: 100px;
+			backface-visibility: hidden;
+		}
+		.a1{
+			background: red;
+			transform: translateZ(100px);
+		}
+		.aa:hover .a1{
+			box-shadow: 1px 1px 20px red;
+		}
+		.a2{
+			background: blue;
+			transform: translateZ(-100px) rotateY(180deg);
+		}
+		.aa:hover .a2{
+			box-shadow: 1px 1px 20px blue;
+		}
+		.a3{
+			background: yellow;
+			transform: translateY(-100px) rotateX(90deg);
+		}
+		.aa:hover .a3{
+			box-shadow: 1px 1px 20px yellow;
+		}
+		.a4{
+			background: green;
+			transform: translateY(100px) rotateX(-90deg);
+		}
+		.aa:hover .a4{
+			box-shadow: 1px 1px 20px green;
+		}
+		.a5{
+			background: purple;
+			transform: translateX(-100px) rotateY(-90deg);
+		}
+		.aa:hover .a5{
+			box-shadow: 1px 1px 20px purple;
+		}
+		.a6{
+			background: #000;
+			transform: translateX(100px) rotateY(90deg);
+		}
+		.aa:hover .a6{
+			box-shadow: 1px 1px 20px #000;
+		}
+		.aa .b{
+			width: 400px;
+			height: 400px;
+			position: absolute;
+			opacity: .2;
+			animation: 5s linear;
+		}
+		.aa .b1{
+			background: #000;
+			transform: translateZ(200px);
+			transition: 1s linear;
+		}
+		.aa:hover .b1{
+			transform: translateZ(300px);
+		}
+		.aa .b2{
+			background: #000;
+			transform: translateZ(-200px) rotateY(180deg);
+			transition: 1s linear;
+		}
+		.aa:hover .b2{
+			transform: translateZ(-300px) rotateY(180deg);
+		}
+		.aa .b3{
+			background: #000;
+			transform: translateY(-200px) rotateX(90deg);
+			transition: 1s linear;
+		}
+		.aa:hover .b3{
+			transform: translateY(-300px) rotateX(90deg);
+		}
+		.aa .b4{
+			background: #000;
+			transform: translateY(200px) rotateX(-90deg);
+			transition: 1s linear;
+		}
+		.aa:hover .b4{
+			transform: translateY(300px) rotateX(-90deg);
+		}
+		.aa .b5{
+			background: #000;
+			transform: translateX(-200px) rotateY(-90deg);
+			transition: 1s linear;
+		}
+		.aa:hover .b5{
+			transform: translateX(-300px) rotateY(-90deg);
+		}
+		.aa .b6{
+			background: #000;
+			transform: translateX(200px) rotateY(90deg);
+			transition: 1s linear;
+		}
+		.aa:hover .b6{
+			transform: translateX(300px) rotateY(90deg);
+		}
+	</style>
+</head>
+<body>
+	<div class="aa">
+	<div class="a1 a"></div>
+	<div class="a2 a"></div>
+	<div class="a3 a"></div>
+	<div class="a4 a"></div>
+	<div class="a5 a"></div>
+	<div class="a6 a"></div>
+	<div class="b1 b"></div>
+	<div class="b2 b"></div>
+	<div class="b3 b"></div>
+	<div class="b4 b"></div>
+	<div class="b5 b"></div>
+	<div class="b6 b"></div>
+	</div>
+</body>
+</html>

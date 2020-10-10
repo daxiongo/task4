@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.a{
+			margin: 0 auto;
+			margin-top: 100px;
+			width: 400px;
+			height: 400px;
+			position: relative;
+			border: 1px solid #000;
+			border-radius: 50%;
+			animation: a 10s linear infinite;
+		}
+		.a::before{
+			display: block;
+			content: '';
+			width: 100px;
+			height: 100px;
+			background: url('taiyang.png') no-repeat center;
+			position: absolute;
+			top: 150px;
+			left: 150px;
+			border-radius: 50%;
+			box-shadow: 1px 1px 20px #fecc00;
+		}
+		@keyframes a {
+				to{
+					transform: rotate(360deg);
+				}
+		}
+		.b{
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			top: -60px;
+			border: 1px solid #000;
+			border-radius: 50%;
+			animation: a 10s linear infinite;
+		}
+		.b::before{
+			display: block;
+			content: '';
+			width: 50px;
+			height: 50px;
+			background: url('yueqiu.png') no-repeat center;
+			border-radius: 50%;
+		}
+		.b::after{
+			display: block;
+			content: '';
+			width: 90px;
+			height: 90px;
+			background: url('diqiu.png') no-repeat center;
+			border-radius: 50%;
+			position: absolute;
+			top: 55px;
+			left: 55px;
+		}
+	</style>
+</head>
+<body>
+	<div class="a">
+		<div class="b"></div>
+	</div>
+</body>
+</html>
